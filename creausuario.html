@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>INVENTARIO ||  CREAR USUARIO</title>
+    <center><IMG SRC="./img/vrbig.jpg"><H1></center>
+    <meta charset="utf-8">
+    <link type="text/css" href="./css/style3.css" rel="stylesheet" />
+</head>
+<script>
+function valida(e){
+    tecla = (document.all) ? e.keyCode : e.which;
+
+    if (tecla==8){
+        return true;
+    }
+
+    patron =/[0-9]/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
+}
+
+</script> 
+<body>
+    </div>
+    <div id="envoltura">
+        <div id="contenedor">
+            <div id="cabecera">
+            </div>
+ 
+            <div id="cuerpo"> 
+                <form action="creausuario.php" method="POST" >
+
+                    <p><label>Nombre:</label></p>
+                    <input REQUIRED name="nombreuser" type="text" placeholder="Ingrese Nombre de usuario"/></p>
+ 
+                    <p><label>Clave:</label></p>
+                    <input REQUIRED name="claveuser" type="password" placeholder="Ingrese clave de usuario"/></p>
+
+       				<p><label>Tipo de perfil:</label></p>
+      				<td> 
+					<select REQUIRED name = "perfil">
+					<option></option>
+					<option value = "adm">Administrador</option>
+					<option value = "user">Usuario</option>
+      				</select>
+      				</td>
+                    <p></p>
+                    <p></p>
+                    <p><input type="submit" name="submit" value="AGREGAR USUARIO"  class="boton"></p>
+                        </form>
+                        <p></p>
+                        <form action="modificausuario.php" method="post">
+                        <input type="submit"  value="MODIFICAR USUARIO" onclick="modificausuario.php" class="boton"></td>
+                        </form>
+                        <p></p>
+                        <p></p>
+                        <form action="inicio.html" method="post">
+                        <input type="submit"  value="INICIO" onclick="inicio.php" class="boton"></td>
+            </div>
+ 
+            <div id="pie">Crear usuario</div>
+        </div>
+ 
+    </div>
+
+    <iframe src="listauser.php" width="1700" height="500" marginwidth="0" marginheight ="45" scrolling="yes" frameborder="0"></iframe>
+</body>
+ 
+</html>

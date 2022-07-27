@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>INVENTARIO ||  CREAR PROVEEDOR</title>
+    <center><IMG SRC="./img/vrbig.jpg"><H1></center>
+    <meta charset="utf-8">
+    <link type="text/css" href="./css/style3.css" rel="stylesheet" />
+</head>
+<script>
+function valida(e){
+    tecla = (document.all) ? e.keyCode : e.which;
+
+    if (tecla==8){
+        return true;
+    }
+
+    patron =/[0-9]/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
+}
+public function valida_rut($rut)
+{
+    if (!preg_match("/^[0-9.]+[-]?+[0-9kK]{1}/", $rut)) {
+        return false;
+    }
+    $rut = preg_replace('/[\.\-]/i', '', $rut);
+    $dv = substr($rut, -1);
+    $numero = substr($rut, 0, strlen($rut) - 1);
+    $i = 2;
+    $suma = 0;
+    foreach (array_reverse(str_split($numero)) as $v) {
+        if ($i == 8)
+            $i = 2;
+        $suma += $v * $i;
+        ++$i;
+    }
+    $dvr = 11 - ($suma % 11);
+    if ($dvr == 11)
+        $dvr = 0;
+    if ($dvr == 10)
+        $dvr = 'K';
+    if ($dvr == strtoupper($dv))
+        return true;
+    else
+        return false;
+}
+
+</script> 
+<body>
+    </div>
+    <div id="envoltura">
+        <div id="contenedor">
+            <div id="cabecera">
+            </div>
+ 
+            <div id="cuerpo"> 
+                <form action="proveedor.php" method="POST" >
+                    <p><label>RUT:</label></p>
+                    <input REQUIRED name="rutprov" type="text" placeholder="Ingrese RUT del proveedor" autofocus="autofocus" maxlength="10" onkeypress="return valida(event)" onkeypress="return valida_rut(event)"/></p>
+
+                    <p><label>Nombre:</label></p>
+                    <input REQUIRED name="nombreprov" type="text" placeholder="Ingrese Nombre del proveedor"/></p>
+ 
+                    <p><label>Direccion:</label></p>
+                    <input REQUIRED name="direprov" type="text" placeholder="Ingrese Direccion del proveedor"/></p> 
+                    <p></p>
+                    <p></p>
+                    <p><input type="submit" name="submit" value="AGREGAR PROVEEDOR"  class="boton"></p>
+                        </form>
+                        <p></p>
+                        <form action="modificarproveedor.php" method="post">
+                        <input type="submit"  value="MODIFICAR PROVEEDOR" onclick="modificarproveedor.php" class="boton"></td>
+                        </form>
+                        <p></p>
+                        <p></p>
+                        <form action="inicio.html" method="post">
+                        <input type="submit"  value="INICIO" onclick="inicio.php" class="boton"></td>
+            </div>
+ 
+            <div id="pie">Ingreso de proveedor</div>
+        </div>
+ 
+    </div>
+
+    <iframe src="listaproveedor.php" width="1700" height="500" marginwidth="50" marginheight ="45" scrolling="auto" frameborder="0"></iframe>
+</body>
+ 
+</html>

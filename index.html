@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>VR INVENTARIOS</title>
+    <center><IMG SRC="./img/vrbig.jpg"><H1></center>
+    <meta charset="utf-8">
+    <link type="text/css" href="./css/style.css" rel="stylesheet" />
+</head>
+    <body>
+        <div id="registrar">
+        </div>
+           <div id="envoltura">
+             <div id="contenedor">
+                 <div id="cabecera" >
+                    </div>
+    
+                        <div id="cuerpo">
+                        <form action="login.php" method="POST">
+                        <p><label >Usuario:</label></p>
+                        <input type="text" REQUIRED name="nom_usuario" placeholder="Ingrese Usuario" autocomplete="off"></p>
+ 
+                        <p><label>Contraseña:</label></p>
+                        <input type="password" REQUIRED name="clave_usuario" placeholder="Ingrese Clave" autocomplete="off"></p>
+                        <p><label>Seleccione tipo de perfil:</label></p>
+                        <td> 
+                        <select REQUIRED name = "tipo_perfil">
+                        <option aria-placeholder="Tipo de perfil"></option>
+                        <option value = "adm">Administrador</option>
+                        <option value = "user">Usuario</option>
+                         </select>
+                        </td>
+ 
+                        <p id="bot"><input type="submit" name="submit" value="Ingresar" class="boton"></p>
+                        </form>
+                </div>
+            <div id="pie">Sistema de ingreso</div>
+        </div>
+    </div>
+</body>
+ 
+</html>
