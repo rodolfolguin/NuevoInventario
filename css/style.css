@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400&family=Roboto:wght@300&display=swap');
+
 body{
-    background:#333333;
-    font-family:Arial, Helvetica, sans-serif;
+    background:#222831;
+    font-family: 'Poppins', sans-serif;
     font-size:12px;
     margin: 0;
 }
@@ -16,16 +18,15 @@ body{
 }
  
 #contenedor{
-    background-color:#505458;
-    box-shadow: 3px 3px 10px 10px rgba(0,0,0,.8);
+    background-color:#2D4059;
+    box-shadow: 3px 3px 10px 10px rgba(0,0,0,0.3);
     -webkit-border-radius:5px;
     -moz-border-radius:10px;
-    border-radius:10px;
+    border-radius:5px;
 }
  
 #cabecera{
-
-    border-bottom: 5px solid #333;
+    border-bottom: 5px solid #2D4059;
     padding-top: 5px;
     height:25px;
     line-height:50px;
@@ -33,50 +34,66 @@ body{
 }
  
 #cuerpo{
-    background:#B9BCBF;
+    background:#2D4059;
     border:solid #ccc;
     border-width: 0px 0;
     padding:15px 35px;
 }
  
 label{
-    color: #666;
+    color: #EEEEEE;
     font-weight: bold
 }
  
 input{
-    border-radius:2px;
-    box-shadow: 2px 2px 3px 1px rgba(0,0,0,.8);
-    font:bold 12px Arial, Helvetica, sans-serif;
-    height: 24px;
-    line-height: 20px;
-    padding:0 2px;
-    width: 230px;
+    border:0px;
+    box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.8);
+    height: 30px;
+    line-height:100px;
+    padding:0.2px;
+    width:100%;
 }
- 
-input#usuario{
-    background:#ddf no-repeat 0 2px;
-}
- 
-input#contrasenia{
-    background:#ddf no-repeat 0 5px; 
+select{
+    border:0px;
+    box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.8);
+    height: 30px;
+    line-height:100px;
+    padding:0.2px;
+    width:100%;
 }
  
 .boton{
     background: #ccc;
     background: -webkit-linear-gradient(top,#fc6,#f63);
     background: linear-gradient(top,#fc6,#f63);
-    color: #666;
-    width: 240px;
+}
+
+.boton {
+    align-items:flex-start;
+    background-color:#008d4c;
+    border-color:#398439;
+    border-radius:3px;
+    border-style:solid;
+    border-width:1px;
+    color:#ffffff;
+    font-size:15px;
+    line-height:20px;
+    padding:1px;
+    text-align:center;
+  }
+
+.boton:hover {
+  background: #FF5722;
 }
 
 .boton:active{
     position: relative;
-    top: 3px;
+    top: 2px;
 }
+
  
 #pie{
-    border-top: 5px solid #333;
+    border-top: 5px solid #2D4059;
     color: #fff;
     font-size: 11px;
     height: 25px;
@@ -85,7 +102,7 @@ input#contrasenia{
 }
  
 form,p{
-    margin:0;
+    margin:10px;
 }
  
 p{
@@ -93,5 +110,5 @@ p{
 }
  
 p#bot{
-    padding-top: 10px;
+    padding-top: 15px;
 }
